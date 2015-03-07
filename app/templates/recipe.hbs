@@ -1,7 +1,7 @@
 {{outlet}}
 
-<h1 class="recipe-heading heading">The Most Awesome Chocolate Chip Cookies</h1>
-<h4 class="author-text">by Rasheeeda</h4>
+<h1 class="recipe-heading heading">{{recipeName}}</h1>
+<h4 class="author-text">{{chefName}} </h4>
 
 <div class="image-div">
 <img src="#">
@@ -24,7 +24,8 @@
         Prep Time
       </h4>
       <h2 class="bar-info-text">
-        15<span class="bar-unit-text">min</span>
+        {{prepTime}}
+        //<span class="bar-unit-text">min</span>
       </h2>
     </div><!-- .prep-time-div
 
@@ -33,7 +34,8 @@
         Cook Time
       </h4>
       <h2 class="bar-info-text">
-        20<span class="bar-unit-text">min</span>
+        {{cookTime}}
+        //<span class="bar-unit-text">min</span>
       </h2>
     </div><!-- .cook-time-div
 
@@ -42,7 +44,8 @@
         Cook Temp
       </h4>
       <h2 class="bar-info-text">
-         350<span class="bar-unit-text">F</span>
+         {{cookTemp}}
+         <span class="bar-unit-text">F</span>
       </h2>
     </div><!-- .cook-temp-div -->
 
@@ -55,14 +58,14 @@
 
     <div class="ingredients-header-wrap">
       <h3 class="ingredient-header-text">
-        12 cookies
+        {{recipeYield}} {{recipeProduct}}
       </h3>
       <button class="adjust-button">Adjust</button>
     </div><!-- .ingredients-header-wrap -->
 
     <ul class="ingredients-ul">
       <li>
-        <div class="ingredient-measurement"><span class="ingredient-number">1/2</span><span class="ingredient-unit">cup</span>
+        <div class="ingredient-measurement"><span class="ingredient-number"> {{ingredientAmount}} </span><span class="ingredient-unit"> {{ingredientType}} </span>
         </div>
         <h3 class="ingredient-name">
         Sugar
@@ -97,8 +100,7 @@
     <ul class="steps-ul">
       <li>
         <h3>Step 1</h3>
-          <p class="step-text">Put stuff in a bowl and mix it and then put it in a pan and put it in the oven and go watch tv and then when you are hungry get it out and eat it. Yum.
-          </p>
+         {{directions}}
 
           <ul class="step-ingredients">
             <li>
@@ -145,7 +147,8 @@
     </ul>
 
     <h3>Personal Notes</h3>
-      <p class="notes-text">Great recipe if you like to watch tv and eat. blah blah blah to the end of the line so I can see where it is.
+      <p class="notes-text">
+        {{chefNotes}}
       </p>
 
       <div class="button-wrap">
