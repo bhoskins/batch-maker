@@ -19,13 +19,20 @@
 
     {{input type="text" placeholder="Cook Temp" value=cookTemp}}
 
-    {{view "select" content=tempDenom}}
+    {{view "select" content=tempDenom
+      optionValuePath="content.isF"
+      optionLabelPath="content.denom"
+      value=currentDenom.isF
+       }}
 
     <!--recipe yield/qty-->
 
     <h4>This Recipe Will Make</h4>
-        {{input type="text" placeholder="Servings" value=recipeYield }}
-        {{input type="text" value=recipeProduct placeholder="cookies, loaves, etc"}}
+        {{input type="text" placeholder="Yield Amount" value=recipeYieldAmt }}
+
+
+
+        {{view "select" content=recipeYieldType}}
 
         <!--measurements & prep-->
 
@@ -41,7 +48,7 @@
        <button class="addStep">Add Step</button>
 
     <h4>Personal Notes</h4>
-        {{textarea placeholder="Chef Notes" value=chefNotes rows="8" cols="40"}}
+        {{textarea placeholder="Recipe Notes" value=recipeNotes rows="8" cols="40"}}
         {{#link-to 'recipe'}}
         <input type="submit" value="Save This Recipe" {{action "saveRecipe" }}>
         {{/link-to}}
