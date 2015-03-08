@@ -8,11 +8,11 @@
 
     <!-- <button class="addPhoto">Add Photo</button> -->
     {{input type="text" placeholder="Recipe Name" value=recipeName}}
-    {{input type="text" placeholder="Chef Name" value=chefName}}
+    {{input type="text" placeholder="Recipe Author" value=recipeAuthor}}
 
    {{! recipe type, cook time, prep time, and temp selector }}
 
-    {{view "select" content=mealType}}
+    {{view "select" content=recipeType value=currentRecipeType}}
 
     {{input type="text" value=prepTime placeholder="Prep Time"}}
     {{input type="text" value=cookTime placeholder="Cook Time"}}
@@ -32,7 +32,8 @@
 
 
 
-        {{view "select" content=recipeYieldType}}
+        {{view "select" content=recipeYieldType
+        value=currentRecipeYieldType}}
 
         <!--measurements & prep-->
 
