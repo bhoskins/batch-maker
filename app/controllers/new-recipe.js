@@ -27,9 +27,6 @@ export default Ember.Controller.extend({
 			var recipeNotes = this.get('recipeNotes');
 
 // console.log(this.currentDenom.isF + " :currentDenom");
-  console.log("recipe type selected: " + recipeTypeSelected);
-    console.log("YieldTypeSelected: " + recipeYieldTypeSelected);
-
 
 
 		var recipe = {
@@ -50,7 +47,8 @@ export default Ember.Controller.extend({
 		};
 
 
-		// this.store.save('recipe', recipe);
+		this.store.save('recipe', recipe);
+
 
 
 		}
